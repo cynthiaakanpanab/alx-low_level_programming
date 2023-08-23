@@ -34,7 +34,7 @@ start = length / 2;
 }
 else
 {
-start = (length - 1) / 2;
+start = (length + 1) / 2;
 }
 
 while (str[start] != '\0')
