@@ -1,12 +1,12 @@
 #include "main.h"
 
-/* Function prototype for jack_bauer */
-void jack_bauer(void);
-
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
-    /* Call the jack_bauer function */
     jack_bauer();
-
     return (0);
 }
