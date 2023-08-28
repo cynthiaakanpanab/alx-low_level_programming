@@ -1,4 +1,3 @@
-#include <stddef.h>
 /**
 * _strspn - Gets the length of a prefix substring.
 * @s: Pointer to the string to be searched.
@@ -10,32 +9,21 @@
 unsigned int _strspn(char *s, char *accept)
 {
 unsigned int count = 0;
-int matched;
+int i, j;
 
-while (*s)
+for (i = 0; s[i]; i++)
 {
-matched = 0;
-
-while (*accept)
-
+for (j = 0; accept[j]; j++)
 {
-if (*s == *accept)
+if (s[i] == accept[j])
 {
-
-matched = 1;
 count++;
 break;
-
 }
-accept++;
 }
-
-if (!matched)
+if (!accept[j])
 break;
-
-s++;
-accept = accept - count; /* Reset accept pointer */
 }
 
-return (count);
+return (i);
 }
