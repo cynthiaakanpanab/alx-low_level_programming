@@ -1,3 +1,4 @@
+#include <stddef.h>
 /**
 * _strpbrk - Searches a string for any of a set of bytes.
 * @s: Pointer to the string to be searched.
@@ -8,19 +9,14 @@
 */
 char *_strpbrk(char *s, char *accept)
 {
-while (*s)
-				{
-char *temp_accept = accept;
-
-while (*temp_accept)
+int i, j;
+for (i = 0; s[i]; i++)
 {
-if (*s == *temp_accept)
-return (s);
-temp_accept++;
+for (j = 0; accept[j]; j++)
+{
+if (s[i] == accept[j])
+return (s + i);
 }
-
-s++;
 }
-
 return (NULL);
 }
